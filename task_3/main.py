@@ -18,13 +18,13 @@ while True:
     else:
         match choice: # Проверяем введеное число
             case 1:
-                with open("E:/Python/dump.json", "r", encoding = "utf-8") as file:
+                with open("dump.json", "r", encoding = "utf-8") as file:
                     data_1 = json.load(file) # Запрашиваем данные из файла
                     print(json.dumps(data_1, ensure_ascii=False, indent=4))
 
             case 2:
                 search_id = input("Введите id записи: ") # Запрашиваем id записи
-                with open("E:/Python/dump.json", "r", encoding="utf-8") as file:
+                with open("dump.json", "r", encoding="utf-8") as file:
                     data_2 = json.load(file) # Запрашиваем данные из файла
 
                 flag = False
@@ -37,7 +37,7 @@ while True:
                     print("Запись с таким id не найдена.")
 
             case 3:
-                with open("E:/Python/dump.json", "r", encoding="utf-8") as file:
+                with open("dump.json", "r", encoding="utf-8") as file:
                     data_3 = json.load(file)  # Запрашиваем данные
 
                 # Запрашиваем данные у пользователя
@@ -62,19 +62,19 @@ while True:
                 data_3.append(new_flower)  # Добавляем словарь в список
 
                 # Сохраняем данные в файл
-                with open("E:/Python/dump.json", "w", encoding="utf-8") as file:
+                with open("dump.json", "w", encoding="utf-8") as file:
                     json.dump(data_3, file, ensure_ascii=False, indent=4)
 
             case 4:
                 delete_id = input("Введите id записи для удаления: ") # Запрашиваем id записи
-                with open("E:/Python/dump.json", "r", encoding="utf-8") as file:
+                with open("dump.json", "r", encoding="utf-8") as file:
                     data_4 = json.load(file)
 
                 original_len = len(data_4) 
                 data_4 = [flower for flower in data_4 if str(flower.get("id")) != delete_id] # Перебираем список, ищем и удаяляем запись с введеным id
 
                 if len(data_4) < original_len: # Проверяем удалился ли элемент
-                    with open("E:/Python/dump.json", "w", encoding="utf-8") as file:
+                    with open("dump.json", "w", encoding="utf-8") as file:
                         json.dump(data_4, file, ensure_ascii=False, indent=4) # Сохраняем изменения
                     print("Запись удалена.")
                 else:
