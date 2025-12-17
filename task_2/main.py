@@ -1,6 +1,9 @@
 # Вариант 2, Зайцев
 import json
-with open("C:/Users/ZaytsSte_89/Desktop/ИПО/lr5/dump.json", "r", encoding = "UTF-8") as file:
+
+print("start code …")
+
+with open("dump.json", "r", encoding = "UTF-8") as file:
     data = json.load(file) # считываем данные из файла
 
 num = input("Введите номер квалификации: ") # Зарпашиваем номер квалификации
@@ -15,3 +18,5 @@ for item in data:
         
 if flag == False:  # Если нет такого номера
     print("-" * 20 + "Не найдено" + "-" * 20)
+
+print("end code …")
