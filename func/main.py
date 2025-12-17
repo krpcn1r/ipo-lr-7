@@ -1,4 +1,4 @@
-# Вариант 2
+# Вариант 2, Зайцев
 import json
 choice = 0
 path = "C:/Users/ZaytsSte_89/Documents/Python/dump.json"
