@@ -1,3 +1,4 @@
+# Вариант 2, Зайцев
 import json
 with open("C:/Users/ZaytsSte_89/Desktop/ИПО/lr5/dump.json", "r", encoding = "UTF-8") as file:
     data = json.load(file) # считываем данные из файла
