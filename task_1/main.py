@@ -1,3 +1,4 @@
+# Вариант 2, Зайцев
 book = []
 for i in range(1,6):
     book.append(dict(title = input("Введите название: "), author = input("Введите автора: "), year = input("Введите год: "))) # Создаю список словарей книг
