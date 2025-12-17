@@ -92,4 +92,6 @@ def main():
                 case 5:
                     break # Завершаем цикл
 if __name__ == "__main__":
+    print("start code …")
     main()
+    print("end code …")
