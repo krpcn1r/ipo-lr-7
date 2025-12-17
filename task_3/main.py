@@ -1,7 +1,7 @@
 # Вариант 2, Зайцев
 import json
 choice = 0
-
+print("start code …")
 while True:
     # Меню ввода
     print(">> 1   Вывод записей")
@@ -82,3 +82,4 @@ while True:
 
             case 5:
                 break # Завершаем цикл
+print("end code …")
